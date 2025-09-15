@@ -1,0 +1,156 @@
+/* Base styles */
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+color: #193059; /* dark grey text */
+scroll-behavior: smooth;
+position:relative;
+}
+
+a, button{
+text-decoration: none;
+color: inherit;
+}
+
+/* WhatsApp and Call button distinct colors */
+.whatsapp-btn {
+background-color: #075e54;
+color: white;
+}
+
+.whatsapp-btn:hover {
+background-color: #075e54;
+}
+
+/* Sections */
+.info-section {
+background-color: #ffffff;
+padding: 30px 24px;
+max-width: 90%;
+margin: 40px auto;
+border-radius: 20px;
+box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+}
+
+.info-section  h2 {
+text-align: center;
+margin-bottom: 26px;
+font-weight: 700;
+font-size: 1.5em;
+color: #193059;
+}
+
+.info-section p {
+font-size: 1em;
+line-height: 1.2;
+color: #193059;
+}
+
+details {
+background: #ede7f6; /* Material purple 50 */
+padding: 14px 20px;
+margin-bottom: 15px;
+border-radius: 16px;
+cursor: pointer;
+box-shadow: inset 0 0 4px #d1c4e9;
+}
+
+details summary {
+outline: none;
+color: #4a148c; /* Purple 900 */
+}
+
+/*cita*/
+.cita{
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+.cita-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.cita-calendario, .cita-formulario {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+/* Formulario */
+.cita-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cita-formulario label {
+  font-weight: 600;
+  text-align: left;
+}
+.cita-formulario input, .cita-formulario select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1 rem;
+  width: 100%;
+}
+.cita-formulario button{
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cita-formulario .btn-verde {
+  background: #1FC224;
+  color: #fff;
+}
+
+.btn-verde2 {
+  background: #1FC224;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cita-formulario .btn-verde:hover {
+  background: #17a61c;
+}
+
+.a-cita{
+    text-decoration: none;
+    background-color: #39eb3f;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px 0px;
+}
+
+footer {
+background-color: #193059;
+padding: 10px;
+padding: 20px 24px;
+text-align: center;
+color: white;
+font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .cita-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

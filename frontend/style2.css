@@ -1,0 +1,161 @@
+/* Sticky navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5); /* 50% white */
+  backdrop-filter: blur(10px); /* blurry */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  z-index: 1000; /* stays on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  color: #193059;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.navbar-logo img {
+  margin-right: 0.5rem;
+  height: 2rem;
+}
+
+.navbar-nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+  color: #007bff; /* Accent color on hover/focus */
+  outline: none;
+}
+
+
+/* Parallax header */
+  .parallax-header {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 600px;
+  background-image: url('https://r.mobirisesite.com/1689480/assets/images/g58f94bfeec7eaa1fee8148245f02-h_mdzckwjj.jpg');
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  overflow: hidden; /* ensure overlay doesn't spill out */
+}
+
+.parallax-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% black opacity */
+  z-index: 0; /* behind the content */
+}
+
+.parallax-header > * {
+  position: relative;
+  z-index: 1; /* above the overlay */
+}
+
+
+  /* Content below the parallax header */
+  .content {
+    padding: 10px;
+    min-height: 600px;
+  }
+  
+.botones a, button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-azul {
+    background-color: #34B7F1;
+}
+
+.btn-verde {
+    background-color: #25D366;
+}
+
+.btn-extra {
+    background-color: #4d5e85;
+}
+
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Cita */
+.cita {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Beneficios */
+.benefit-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.benefit span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive */
+@media (min-width: 360px) and (max-width: 768px){
+   .service-grid {    
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+}

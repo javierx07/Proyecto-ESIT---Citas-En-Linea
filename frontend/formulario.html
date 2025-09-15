@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Citas - Consultorio Dental</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Reserva tu Cita</h1>
+            <p>Agenda tu cita de forma rápida y sencilla</p>
+        </div>
+
+        <div class="form-container">
+            <div id="loadingMessage" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                Cargando horarios disponibles...
+            </div>
+
+            <div id="messageContainer"></div>
+
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre Completo *</label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Número de Teléfono *</label>
+                    <div class="phone-container">
+                        <div class="phone-prefix">+503</div>
+                        <input type="text" id="telefono" name="telefono" class="form-control phone-input" 
+                               maxlength="8" pattern="[0-9]{8}" 
+                               placeholder="12345678" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoServicio">Tipo de Servicio *</label>
+                    <select id="tipoServicio" name="tipoServicio" class="form-control" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="limpieza-dental">Limpieza Dental</option>
+                        <option value="ortodoncia">Ortodoncia</option>
+                        <option value="extracciones">Extracciones</option>
+                        <option value="implantes">Implantes</option>
+                        <option value="carillas">Carillas</option>
+                        <option value="diseño-sonrisa">Diseño de Sonrisa</option>
+                        <option value="radiografia">Radiografía</option>
+                        <option value="protesis-dentales">Prótesis Dentales</option>
+                    </select>
+                </div>
+
+                <div class="date-time-container">
+                    <div class="form-group">
+                        <label for="fecha">Fecha de la Cita *</label>
+                        <input type="date" id="fecha" name="fecha" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horario *</label>
+                        <select id="horario" name="horario" class="form-control" required>
+                            <option value="">Selecciona un horario</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    Agendar Cita
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
